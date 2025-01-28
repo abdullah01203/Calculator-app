@@ -77,12 +77,17 @@ body{
 .head{
     display: flex;
     justify-content: space-between;
-    font-size: 20px;
     margin-bottom:  10px;
     color: var(--title);
 }
 .toggle-btn{ 
     display: flex;
+    font-size: 10px;
+    text-transform: uppercase;
+    column-gap: 10px;
+}
+.toggle-btn p{
+    align-self: center;
 }
 input[type=text]{
    background-color: var(--screen-background);
@@ -154,6 +159,7 @@ input[type=radio]:checked+.radio{
     padding: 10px;
     border: none;
     font-weight: 700;
+
 }
 .keypad button#opr-1{
     font-size: 17px;
