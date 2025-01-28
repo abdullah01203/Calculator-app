@@ -1,4 +1,4 @@
-"use strict";
+
 window.onload = () => {
     const th = localStorage.getItem("theme");
     if (th) {
