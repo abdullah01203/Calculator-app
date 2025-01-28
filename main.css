@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.theme1{
+    /* ===================Backgrounds============= */
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background:hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    /* ============= key =============  */
+    --gray-key-background: hsl(225, 21%, 49%);
+    --gray-key-shadow: hsl(224, 28%, 35%);
+    --red-key-background: hsl(6, 63%, 50%);
+    --red-key-shadow: hsl(6, 70%, 34%);
+    --Light-key-background:hsl(30, 25%, 89%);
+    --Light-key-shadow:hsl(28, 16%, 65%);
+    /* ============= text =============  */
+    --very-dark: hsl(221, 14%, 31%);
+    --title:hsl(0, 0%, 100%);
+    --White: hsl(0, 0%, 100%);
+}
+.theme2 {
+    /* ===================Backgrounds============= */
+    --main-background: hsl(0, 0%, 90%);
+    --toggle-background:hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    /* ============= key =============  */
+    --gray-key-background: hsl(185, 42%, 37%);
+    --gray-key-shadow: hsl(185, 58%, 25%);
+    --red-key-background: hsl(25, 98%, 40%);
+    --red-key-shadow: hsl(25, 99%, 27%);
+    --Light-key-background:hsl(45, 7%, 89%);
+    --Light-key-shadow:hsl(35, 11%, 61%);
+    /* ============= text =============  */
+    --very-dark: hsl(60, 10%, 19%);
+    --title:hsl(60, 10%, 19%);
+    --White: hsl(0, 0%, 100%);
+}
+.theme3 {
+    /* ===================Backgrounds============= */
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-background:hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+    /* ============= key =============  */
+    --gray-key-background: hsl(281, 89%, 26%);
+    --gray-key-shadow: hsl(285, 91%, 52%);
+    --red-key-background: hsl(176, 100%, 44%);
+    --red-key-shadow: hsl(177, 92%, 70%);
+    --Light-key-background:hsl(268, 47%, 21%);
+    --Light-key-shadow:hsl(290, 70%, 36%);
+    /* ============= text =============  */
+    --very-dark: hsl(52, 100%, 62%);
+    --title:hsl(52, 100%, 62%);
+    --White: hsl(0, 0%, 100%);
+}
+html , button  , input{
+    font-family: "League Spartan", serif;
+}
+body, button, input{
+    font-size: 32px;
+}
+body{
+    background-color: var(--main-background);
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+.container{
+    width: min(90%,400px);
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom:  10px;
+    color: var(--title);
+}
+.toggle-btn{ 
+    display: flex;
+}
+input[type=text]{
+   background-color: var(--screen-background);
+   border: none;
+   outline: none;
+   border-radius: 10px;
+   padding: 20px; 
+   color: var(--title);
+   width: 100%;
+   font-weight: 700;
+   margin-bottom: 20px;
+   text-align: right;
+}
+.toggle{
+    display: flex;
+    flex-direction: column;
+}
+.label{
+    font-size: .4rem;
+    display: flex;
+    justify-content: space-evenly;
+    
+
+}
+
+input[type=radio]{
+   display: none;
+
+}
+
+.radio{
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    display: block;
+    border-radius: 50%;
+}
+
+input[type=radio]:checked+.radio{
+    background-color: var(--red-key-background);
+}
+.radio-group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50px;
+    background-color: var(--toggle-background);
+    border-radius: 10px;
+    margin: 0 5px;
+    flex: 1;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--title);
+}
+
+.attribution a {
+   color: var(--red-key-background);
+}
+.keypad{
+    padding: 20px;
+    background-color: var(--toggle-background);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.keypad button{
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    font-weight: 700;
+}
+.keypad button#opr-1{
+    font-size: 17px;
+}
+.keypad button.normal{
+    background-color: var(--Light-key-background);
+    box-shadow: 0 5px var(--Light-key-shadow);
+    color: var(--very-dark);
+}
+.keypad button.prim{
+    background-color: var(--gray-key-background);
+    box-shadow: 0 5px var(--gray-key-shadow);
+    color: var(--White);
+}
+
+.keypad button.sec{
+    background-color: var(--red-key-background);
+    box-shadow: 0 5px var(--red-key-shadow);
+    color: var(--White);
+}
+
+
+.keypad button.normal:active{
+    background-color: var(--Light-key-shadow);
+    box-shadow: none;
+    transform: translateY(5px);
+}
+.keypad button.prim:active{
+    background-color: var(--gray-key-shadow);
+    box-shadow: none;
+    transform: translateY(5px);
+}
+.keypad button.sec:active{
+    background-color: var(--red-key-shadow);
+    box-shadow: none;
+    transform: translateY(5px);
+}
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+
+.operation{
+    display: grid;
+}
+
+
+.control{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top : 20px;
+}
