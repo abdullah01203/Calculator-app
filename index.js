@@ -90,18 +90,5 @@ function reset() {
     }
 }
 function calc() {
-    try {
-        if (_calc.match(/[0-9+-/*]+/)) {
-            _calc = eval(_calc).toString();
-            if (calcScreen) {
-                calcScreen.value = _calc.toString();
-            }
-        }
-    }
-    catch (error) {
-        console.error("Calculation error:", error);
-        if (calcScreen) {
-            calcScreen.value = "Error";
-        }
-    }
+
 }
