@@ -38,7 +38,6 @@ let keyNum = [];
 let keyOperation = [];
 let keyControl = [document.getElementById("reset"), document.getElementById("equal")];
 let _calc = "";
-let Number = [];
 let operations = [];
 let result;
 let delKey = document.getElementById("opr-1");
